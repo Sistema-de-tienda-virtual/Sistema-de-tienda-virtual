@@ -1,0 +1,32 @@
+# Sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Dependencias y builds (fase 6)
+node_modules/
+dist/
+build/
+target/
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Entornos y secretos
+.env
+.env.local
+*.local
+
+# Temporales de ofimática
+~$*
+*.tmp
+
+# Logs
+*.log
+npm-debug.log*
