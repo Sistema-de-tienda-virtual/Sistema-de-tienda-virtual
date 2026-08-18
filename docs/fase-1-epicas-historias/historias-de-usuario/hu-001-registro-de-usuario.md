@@ -10,9 +10,9 @@
 
 ## Historia
 
-**Como** visitante de la tienda
+**Como** visitante de la tienda de flores
 **quiero** registrarme con mi correo y una contraseña
-**para** tener una cuenta que me permita comprar y consultar mis pedidos.
+**para** tener una cuenta que me permita comprar arreglos y consultar mis pedidos.
 
 ## Criterios de aceptación
 
