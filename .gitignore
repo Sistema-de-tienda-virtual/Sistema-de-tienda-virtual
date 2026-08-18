@@ -27,6 +27,9 @@ venv/
 ~$*
 *.tmp
 
+# Documentos exportados/generados (se regeneran con los scripts en docs/, no se versionan)
+docs/**/*.docx
+
 # Logs
 *.log
 npm-debug.log*

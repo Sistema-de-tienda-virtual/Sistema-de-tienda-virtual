@@ -12,6 +12,12 @@ no de escribirlas desde cero.
 | _(nombre 3)_ | EP-05, EP-06 | HU-023 a HU-036 | `fase-1/ep-05-ep-06` |
 | _(nombre 4)_ | EP-07, EP-08 | HU-037 a HU-043 | `fase-1/ep-07-ep-08` |
 
+> **Documento para entregar:** el Word consolidado de esta fase (portada + los 4 archivos
+> base + las 43 historias) no se versiona en el repo porque duplicaría el contenido de los
+> `.md` y quedaría desactualizado. Para generarlo: `pip install python-docx` y luego
+> `python generar-documento-word.py` desde esta carpeta. Regenerarlo siempre antes de
+> entregar, después del último cambio en los `.md`.
+
 > **Nota sobre los datos genéricos:** todo el documento (problema, actores, historias,
 > reglas de negocio) usa el placeholder `[Floristería Aroma de Rosas]` y supuestos
 > razonables (horarios, franjas de entrega, política de merma, etc.) porque el proyecto
