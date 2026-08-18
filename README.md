@@ -1,6 +1,7 @@
 # Sistema de Tienda Virtual
 
-Trabajo integrador — desarrollo de un sistema de tienda virtual (e-commerce) aplicando el ciclo completo de análisis, diseño e implementación.
+Trabajo integrador — desarrollo de un sistema de tienda virtual (e-commerce) a la medida
+para una floristería, aplicando el ciclo completo de análisis, diseño e implementación.
 
 ## Equipo
 
