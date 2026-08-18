@@ -1,4 +1,4 @@
-# HU-016 — Agregar producto al carrito
+# HU-019 — Agregar producto al carrito
 
 | Campo | Valor |
 | ----- | ----- |
@@ -45,11 +45,11 @@
 
 - RN-10: No se puede agregar al carrito una cantidad mayor al stock disponible.
 - RN-11: La cantidad mínima por ítem es 1 y debe ser un número entero.
-- RN-12: Agregar al carrito **no** reserva ni descuenta stock; el descuento ocurre al confirmar el pedido (HU-029).
+- RN-12: Agregar al carrito **no** reserva ni descuenta stock; el descuento ocurre al confirmar el pedido (HU-038).
 - RN-13: El precio del ítem es el vigente al momento de confirmar el pedido, no al agregarlo.
 
 ## Notas y dependencias
 
-- Depende de HU-007 (detalle de producto).
-- Relacionada con HU-017, HU-018 y HU-019.
+- Depende de HU-008 (detalle de producto).
+- Relacionada con HU-020, HU-021 y HU-022.
 - Definir en fase 2 el comportamiento del carrito para visitantes no autenticados.
