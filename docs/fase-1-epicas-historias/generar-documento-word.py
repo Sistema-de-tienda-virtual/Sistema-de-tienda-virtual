@@ -166,19 +166,17 @@ toc_items = [
     '1. Definición del proyecto',
     '2. Épicas',
     '3. Backlog de historias de usuario',
-    '4. Asignación de trabajo del equipo',
-    '5. Detalle de historias de usuario (HU-001 a HU-043)',
+    '4. Detalle de historias de usuario (HU-001 a HU-043)',
 ]
 for item in toc_items:
     doc.add_paragraph(item, style='List Bullet')
 doc.add_page_break()
 
-# ================= 1-4: documentos base =================
+# ================= 1-3: documentos base =================
 sections = [
     ('01-definicion-del-proyecto.md', '1. Definición del proyecto'),
     ('02-epicas.md', '2. Épicas'),
     ('03-backlog-historias.md', '3. Backlog de historias de usuario'),
-    ('04-asignacion-equipo.md', '4. Asignación de trabajo del equipo'),
 ]
 
 for filename, heading in sections:
@@ -188,8 +186,8 @@ for filename, heading in sections:
     add_markdown_body(content, skip_h1=True, base_level=2)
     doc.add_page_break()
 
-# ================= 5: historias de usuario =================
-doc.add_heading('5. Detalle de historias de usuario', level=1)
+# ================= 4: historias de usuario =================
+doc.add_heading('4. Detalle de historias de usuario', level=1)
 doc.add_paragraph(
     'A continuación, el detalle completo de cada historia de usuario del backlog, en '
     'formato Dado/Cuando/Entonces, con sus reglas de negocio y notas de dependencia.'
