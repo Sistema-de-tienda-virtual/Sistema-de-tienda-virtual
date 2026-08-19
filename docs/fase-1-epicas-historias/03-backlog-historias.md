@@ -5,7 +5,8 @@ Dado/Cuando/Entonces, reglas de negocio, notas) va en un archivo propio dentro d
 `historias-de-usuario/`, usando `docs/plantillas/plantilla-historia-usuario.md`. Las 43
 historias ya tienen su archivo de detalle (columna **Detalle** marcada con ✅) como borrador
 base con datos genéricos; el equipo debe revisarlas, ajustarlas y asignar
-responsable/estado como parte del "terminado" de la fase 1 (ver `04-asignacion-equipo.md`).
+responsable/estado como parte del "terminado" de la fase 1 (ver
+`docs/actas-reuniones/plan-de-trabajo-fase-1.md`).
 
 **Prioridad:** Alta = entra al MVP · Media = segunda iteración · Baja = deseable.
 **Estimación:** puntos de historia (1, 2, 3, 5, 8).
