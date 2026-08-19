@@ -54,4 +54,4 @@ Entregado, Cancelado)
 - Relacionada con HU-030 (cliente ve el detalle/estado), HU-034 (asignación de repartidor)
   y HU-036 (repartidor actualiza el estado de entrega).
 - Definir en fase 2 la lista final y nombres exactos de los estados (pendiente de acordar
-  con el equipo, ver `04-asignacion-equipo.md`).
+  con el equipo, ver `docs/actas-reuniones/plan-de-trabajo-fase-1.md`).
