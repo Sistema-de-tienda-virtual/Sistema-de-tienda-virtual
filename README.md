@@ -11,7 +11,7 @@ para una floristería, aplicando el ciclo completo de análisis, diseño e imple
 | _(nombre)_ | _(rol)_       | _(@usuario)_   |
 | _(nombre)_ | _(rol)_       | _(@usuario)_   |
 | _(nombre)_ | _(rol)_       | _(@usuario)_   |
-
+ 
 ## Fases del proyecto
 
 | Fase | Etapa | Entregable | Estado |
