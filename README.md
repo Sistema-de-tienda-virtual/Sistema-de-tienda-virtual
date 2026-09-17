@@ -7,19 +7,19 @@ para una floristería, aplicando el ciclo completo de análisis, diseño e imple
 
 | Integrante | Rol principal | Usuario GitHub |
 | ---------- | ------------- | -------------- |
-| _(nombre)_ | _(rol)_       | _(@usuario)_   |
-| _(nombre)_ | _(rol)_       | _(@usuario)_   |
-| _(nombre)_ | _(rol)_       | _(@usuario)_   |
-| _(nombre)_ | _(rol)_       | _(@usuario)_   |
- 
+| Román Alberto Bolaños Cerquera | Líder técnico y administrador del repositorio | @romanlabs |
+| Ivan Andrés Cortes Olaya | Analista de requerimientos y documentación | @ivanandrescortesolaya-spec |
+| Juan Felipe Cortes Quintero | Revisor de Pull Requests y desarrollo (Fase 6) | @juanfelipe1216 |
+| Jorge Steven Gutierrez Fierro | Modelado de base de datos y diseño de mockups | @fierroestiven6-cell |
+
 ## Fases del proyecto
 
 | Fase | Etapa | Entregable | Estado |
 | ---- | ----- | ---------- | ------ |
-| 1 | Épica y Historias de usuario | Épicas + Historias de usuario | 🟡 En curso |
-| 2 | Requerimientos | Documento de requerimientos | ⚪ Pendiente |
-| 3 | Diagramas UML | Diagramas UML | ⚪ Pendiente |
-| 4 | Base de datos | Modelo ER/UML + Script SQL | ⚪ Pendiente |
+| 1 | Épica y Historias de usuario | Épicas + Historias de usuario | 🟢 Terminado |
+| 2 | Requerimientos | Documento de requerimientos | 🟢 Terminado |
+| 3 | Diagramas UML | Diagramas UML | 🟢 Terminado |
+| 4 | Base de datos | Modelo ER/UML + Script SQL | 🟡 En curso |
 | 5 | Mockup / Prototipo | Prototipo navegable | ⚪ Pendiente |
 | 6 | Programa funcional | MVP funcional | ⚪ Pendiente |
 
