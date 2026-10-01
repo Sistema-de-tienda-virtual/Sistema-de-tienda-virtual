@@ -31,7 +31,8 @@ Leyenda: ⚪ Pendiente · 🟡 En curso · 🟢 Terminado
 docs/
   fase-1-epicas-historias/    Problema, objetivo, actores, épicas, historias
   fase-2-requerimientos/      RF, RNF, reglas de negocio, trazabilidad
-  fase-3-uml/                 Casos de uso, clases, secuencia, actividades
+  fase-3-uml/                 Casos de uso, clases, secuencia, actividades, estados,
+                              componentes y despliegue (.png + .drawio)
   fase-4-base-de-datos/       Modelo ER, lógico, físico y scripts SQL
   fase-5-mockups/             Wireframes y prototipo navegable
   fase-6-desarrollo/          Stack, arquitectura y plan de pruebas
