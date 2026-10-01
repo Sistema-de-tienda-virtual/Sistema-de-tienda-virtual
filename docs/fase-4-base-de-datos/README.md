@@ -10,6 +10,15 @@
 - `scripts/03-consultas.sql` — consultas de verificación
 - `diccionario-de-datos.md` — descripción de cada tabla, campo, tipo y restricción
 
+## Entregado
+
+- [Modelo conceptual (MER)](modelos/modelo_conceptual_mer/modelo_conceptual.png)
+- [Modelo integrado](modelos/modelo-integrado.md) — entidades, atributos, claves, relaciones y diccionario de datos consolidado
+- [Modelo físico](modelos/modelo-fisico.md) — motor, tipos, acciones referenciales e índices
+- [Script de creación de tablas](scripts/01-crear-tablas.sql)
+
+![Modelo conceptual](modelos/modelo_conceptual_mer/modelo_conceptual.png)
+
 ## Criterios
 
 - El modelo debe quedar normalizado **hasta 3FN**.
