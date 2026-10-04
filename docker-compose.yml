@@ -1,0 +1,17 @@
+
+services:
+  floristeria-mysql:
+    image: mysql:8.0
+    container_name: tienda_virtual_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: "FloristeriaLocal_2026!"
+      MYSQL_DATABASE: floristeria_db
+      TZ: America/Bogota
+    ports:
+      - "3310:3306"
+    volumes:
+      - floristeria_mysql_data:/var/lib/mysql
+
+volumes:
+  floristeria_mysql_data:

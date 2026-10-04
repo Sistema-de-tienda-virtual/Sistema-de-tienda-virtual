@@ -422,19 +422,29 @@ CREATE TABLE carrito (
 -- No guarda precio: RN-12 y RN-13 mandan que el precio que cuenta es el
 -- vigente al confirmar, y ese se congela en item_pedido.
 CREATE TABLE item_carrito (
-  id_item_carrito  BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  id_carrito       BIGINT UNSIGNED NOT NULL,
-  id_producto      BIGINT UNSIGNED NOT NULL,
-  cantidad         INT             NOT NULL,
+  id_item_carrito BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  id_carrito BIGINT UNSIGNED NOT NULL,
+  id_producto BIGINT UNSIGNED NOT NULL,
+  cantidad INT NOT NULL,
   CONSTRAINT pk_item_carrito PRIMARY KEY (id_item_carrito),
-  -- Un producto aparece una sola vez por carrito; repetirlo es sumar cantidad.
-  CONSTRAINT uq_item_carrito_producto UNIQUE (id_carrito, id_producto),
+-- Un producto aparece una sola vez por carrito; repetirlo es sumar cantidad.
+  CONSTRAINT uq_item_carrito_producto UNIQUE (id_carrito,
+id_producto),
   CONSTRAINT fk_item_carrito_carrito FOREIGN KEY (id_carrito)
-    REFERENCES carrito (id_carrito) ON DELETE CASCADE ON UPDATE CASCADE,
-  -- Los productos se desactivan, no se borran (RN-16).
+    REFERENCES carrito (id_carrito) ON
+DELETE
+	CASCADE ON
+	UPDATE
+		CASCADE,
+		-- Los productos se desactivan, no se borran (RN-16).
   CONSTRAINT fk_item_carrito_producto FOREIGN KEY (id_producto)
-    REFERENCES producto (id_producto) ON DELETE RESTRICT ON UPDATE CASCADE,
-  CONSTRAINT ck_item_carrito_cantidad CHECK (cantidad >= 1),           -- RN-11
+    REFERENCES producto (id_producto) ON
+		DELETE
+			RESTRICT ON
+			UPDATE
+				CASCADE,
+				CONSTRAINT ck_item_carrito_cantidad CHECK (cantidad >= 1),
+				-- RN-11
   INDEX ix_item_carrito_producto (id_producto)
 ) ENGINE = InnoDB;
 
@@ -442,4 +452,4 @@ CREATE TABLE item_carrito (
 -- Fin del DDL. 20 tablas, las mismas del modelo integrado.
 -- Las reglas que no se pueden declarar aqui estan en modelos/modelo-fisico.md,
 -- seccion 11, con la via de implementacion propuesta.
--- =============================================================================
+-- ============================================================================= 
