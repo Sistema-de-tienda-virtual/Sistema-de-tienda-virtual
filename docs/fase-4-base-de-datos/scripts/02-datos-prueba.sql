@@ -67,7 +67,7 @@ INSERT INTO ocasion (id_ocasion, nombre, estado) VALUES
 -- 7. PROMOCIONES
 INSERT INTO promocion (
     id_promocion,
-    descipcion,
+    descripcion,
     porcentaje_descuento,
     fecha_inicio,
     fecha_fin,

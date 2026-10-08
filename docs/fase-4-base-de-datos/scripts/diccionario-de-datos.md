@@ -287,7 +287,7 @@ Restricciones: \`uq_categoria_nombre\` y \`ck_categoria_nombre_no_vacio\`.
 
 \| \`id_promocion\`         | BIGINT UNSIGNED                        | PK, AI, NOT NULL           | Identificador de la promoción.                       |
 
-\| \`descipcion\`           | VARCHAR(255)                           | NOT NULL                   | Descripción de la promoción.                         |
+\| \`descripcion\`           | VARCHAR(255)                           | NOT NULL                   | Descripción de la promoción.                         |
 
 \| \`porcentaje_descuento\` | DECIMAL(5,2)                           | NOT NULL, CHECK            | Porcentaje de descuento, mayor que cero y hasta 100. |
 
@@ -299,7 +299,7 @@ Restricciones: \`uq_categoria_nombre\` y \`ck_categoria_nombre_no_vacio\`.
 
 
 
-**\*\*Importante:\*\*** el nombre físico \`descipcion\` conserva la escritura exacta del DDL recibido. No lo cambies sin actualizar también los scripts y el modelo físico.
+**\*\*Importante:\*\*** el nombre físico \`descripcion\` conserva la escritura exacta del DDL recibido. No lo cambies sin actualizar también los scripts y el modelo físico.
 
 
 
