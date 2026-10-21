@@ -1,2 +1,88 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mxfile host="app.diagrams.net"><diagram id="catalogo-juan" name="Modelo logico catalogo"><mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0"><root><mxCell id="0"/><mxCell id="1" parent="0"/><mxCell id="categoria" value="CATEGORIA&amp;#xa;PK id_categoria BIGINT&amp;#xa;UQ nombre VARCHAR(100)&amp;#xa;estado VARCHAR(15)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;fillColor=#F5F8FB;strokeColor=#425466;" vertex="1" parent="1"><mxGeometry x="40" y="120" width="300" height="140" as="geometry" /></mxCell><mxCell id="producto" value="PRODUCTO&amp;#xa;PK id_producto BIGINT&amp;#xa;FK id_categoria BIGINT&amp;#xa;nombre VARCHAR(150)&amp;#xa;descripcion VARCHAR(1000)&amp;#xa;precio DECIMAL(12,2)&amp;#xa;stock_actual INT&amp;#xa;umbral_stock_minimo INT NULL&amp;#xa;fecha_ingreso DATE&amp;#xa;vida_util_estimada_dias INT&amp;#xa;estado VARCHAR(15)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;fillColor=#D9EAF7;strokeColor=#425466;" vertex="1" parent="1"><mxGeometry x="500" y="60" width="360" height="300" as="geometry" /></mxCell><mxCell id="ocasion" value="OCASION&amp;#xa;PK id_ocasion BIGINT&amp;#xa;UQ nombre VARCHAR(100)&amp;#xa;estado VARCHAR(15)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;fillColor=#F5F8FB;strokeColor=#425466;" vertex="1" parent="1"><mxGeometry x="1040" y="40" width="300" height="140" as="geometry" /></mxCell><mxCell id="promocion" value="PROMOCION&amp;#xa;PK id_promocion BIGINT&amp;#xa;descripcion VARCHAR(500)&amp;#xa;porcentaje_descuento DECIMAL(5,2)&amp;#xa;fecha_inicio DATE&amp;#xa;fecha_fin DATE&amp;#xa;estado VARCHAR(15)" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;fillColor=#F5F8FB;strokeColor=#425466;" vertex="1" parent="1"><mxGeometry x="1030" y="500" width="330" height="220" as="geometry" /></mxCell><mxCell id="producto_ocasion" value="PRODUCTO_OCASION&amp;#xa;PK FK id_producto BIGINT&amp;#xa;PK FK id_ocasion BIGINT" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;fillColor=#F5F8FB;strokeColor=#425466;" vertex="1" parent="1"><mxGeometry x="500" y="500" width="360" height="130" as="geometry" /></mxCell><mxCell id="producto_promocion" value="PRODUCTO_PROMOCION&amp;#xa;PK FK id_producto BIGINT&amp;#xa;PK FK id_promocion BIGINT" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;fillColor=#F5F8FB;strokeColor=#425466;" vertex="1" parent="1"><mxGeometry x="40" y="500" width="340" height="130" as="geometry" /></mxCell><mxCell id="e1" value="1 a N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;fontSize=10;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="categoria" target="producto"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="e2" value="1 a N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;fontSize=10;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="producto" target="producto_ocasion"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="e3" value="1 a N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;fontSize=10;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="ocasion" target="producto_ocasion"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="e4" value="1 a N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;fontSize=10;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="producto" target="producto_promocion"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="e5" value="1 a N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;fontSize=10;jettySize=auto;orthogonalLoop=1;" edge="1" parent="1" source="promocion" target="producto_promocion"><mxGeometry relative="1" as="geometry" /></mxCell></root></mxGraphModel></diagram></mxfile>
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="modelo-logico-catalogo-juan" name="Modelo lógico alineado con SQL">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="2200" pageHeight="1400">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="titulo" value="Modelo lógico del catálogo — Juan&lt;br&gt;MySQL 8.0.16+ · nombres y tipos de 01-crear-tablas.sql" style="text;html=1;align=left;verticalAlign=top;fontFamily=Consolas;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="2100" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="categoria" value="categoria&lt;br&gt;PK id_categoria SMALLINT UNSIGNED NOT NULL&lt;br&gt;UQ nombre VARCHAR(60) NOT NULL&lt;br&gt;estado ENUM NOT NULL&lt;br&gt;  &amp;#x27;ACTIVA&amp;#x27;,&amp;#x27;INACTIVA&amp;#x27;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="590" height="144" as="geometry"/>
+        </mxCell>
+        <mxCell id="producto" value="producto&lt;br&gt;PK id_producto BIGINT UNSIGNED NOT NULL&lt;br&gt;FK id_categoria SMALLINT UNSIGNED NOT NULL&lt;br&gt;nombre VARCHAR(150) NOT NULL&lt;br&gt;descripcion VARCHAR(1000) NOT NULL&lt;br&gt;precio DECIMAL(12,2) NOT NULL&lt;br&gt;fecha_ingreso DATE NOT NULL&lt;br&gt;vida_util_estimada_dias SMALLINT UNSIGNED NULL&lt;br&gt;estado ENUM NOT NULL&lt;br&gt;  &amp;#x27;ACTIVO&amp;#x27;,&amp;#x27;INACTIVO&amp;#x27;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="780" y="140" width="690" height="264" as="geometry"/>
+        </mxCell>
+        <mxCell id="ocasion" value="ocasion&lt;br&gt;PK id_ocasion SMALLINT UNSIGNED NOT NULL&lt;br&gt;UQ nombre VARCHAR(60) NOT NULL&lt;br&gt;estado ENUM NOT NULL&lt;br&gt;  &amp;#x27;ACTIVA&amp;#x27;,&amp;#x27;INACTIVA&amp;#x27;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="40" y="630" width="590" height="144" as="geometry"/>
+        </mxCell>
+        <mxCell id="promocion" value="promocion&lt;br&gt;PK id_promocion BIGINT UNSIGNED NOT NULL&lt;br&gt;descripcion VARCHAR(255) NOT NULL&lt;br&gt;porcentaje_descuento DECIMAL(5,2) NOT NULL&lt;br&gt;fecha_inicio DATE NOT NULL&lt;br&gt;fecha_fin DATE NOT NULL&lt;br&gt;estado ENUM NOT NULL&lt;br&gt;  &amp;#x27;ACTIVA&amp;#x27;,&amp;#x27;INACTIVA&amp;#x27;,&amp;#x27;FINALIZADA&amp;#x27;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="810" width="550" height="216" as="geometry"/>
+        </mxCell>
+        <mxCell id="producto_ocasion" value="producto_ocasion&lt;br&gt;PK / FK id_producto BIGINT UNSIGNED NOT NULL&lt;br&gt;PK / FK id_ocasion SMALLINT UNSIGNED NOT NULL" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="780" y="630" width="690" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="producto_promocion" value="producto_promocion&lt;br&gt;PK / FK id_producto BIGINT UNSIGNED NOT NULL&lt;br&gt;PK / FK id_promocion BIGINT UNSIGNED NOT NULL" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="780" y="960" width="690" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="inventario" value="inventario&lt;br&gt;PK / FK id_producto BIGINT UNSIGNED NOT NULL&lt;br&gt;stock_actual INT NOT NULL&lt;br&gt;umbral_stock_minimo INT NULL" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="1600" y="140" width="550" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="e0" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=none;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="categoria" target="producto">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="630" y="220"/>
+              <mxPoint x="780" y="220"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" value="1 : 0..1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=none;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="producto" target="inventario">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1470" y="220"/>
+              <mxPoint x="1600" y="220"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=none;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="producto" target="producto_ocasion">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1100" y="404"/>
+              <mxPoint x="1100" y="630"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=none;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="ocasion" target="producto_ocasion">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="630" y="710"/>
+              <mxPoint x="780" y="710"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=none;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="producto" target="producto_promocion">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1470" y="380"/>
+              <mxPoint x="1520" y="380"/>
+              <mxPoint x="1520" y="1020"/>
+              <mxPoint x="1470" y="1020"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=none;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="promocion" target="producto_promocion">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1600" y="1040"/>
+              <mxPoint x="1470" y="1040"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leyenda" value="PK: clave primaria · FK: clave foránea · UQ: único · PK compuesta en tablas asociativas&lt;br&gt;Cada hija referencia exactamente un padre. Las etiquetas indican padre : hijas permitidas por el DDL.&lt;br&gt;Crear inventario con producto es regla de aplicación; las relaciones N:M admiten cero asociaciones.&lt;br&gt;ON DELETE / ON UPDATE y valores DEFAULT: consultar las tablas del documento Markdown." style="text;html=1;align=left;verticalAlign=top;fontFamily=Consolas;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1240" width="2100" height="120" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
