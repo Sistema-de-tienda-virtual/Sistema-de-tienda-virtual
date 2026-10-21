@@ -19,7 +19,7 @@ para una floristería, aplicando el ciclo completo de análisis, diseño e imple
 | 1 | Épica y Historias de usuario | Épicas + Historias de usuario | 🟢 Terminado |
 | 2 | Requerimientos | Documento de requerimientos | 🟢 Terminado |
 | 3 | Diagramas UML | Diagramas UML | 🟢 Terminado |
-| 4 | Base de datos | Modelo ER/UML + Script SQL | 🟡 En curso |
+| 4 | Base de datos | Modelo ER/UML + Scripts SQL + Diccionario de datos | 🟢 Terminado |
 | 5 | Mockup / Prototipo | Prototipo navegable | ⚪ Pendiente |
 | 6 | Programa funcional | MVP funcional | ⚪ Pendiente |
 
