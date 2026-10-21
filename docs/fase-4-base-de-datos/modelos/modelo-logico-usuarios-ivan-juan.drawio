@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram id="modelo-logico-usuarios-ivan-juan" name="Modelo lógico alineado con SQL">
+    <mxGraphModel grid="1" gridSize="10" page="1" pageWidth="2200" pageHeight="1400">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="titulo" value="Modelo lógico de usuarios y entregas — Iván y Juan&lt;br&gt;MySQL 8.0.16+ · nombres y tipos de 01-crear-tablas.sql" style="text;html=1;align=left;verticalAlign=top;fontFamily=Consolas;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="2100" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="usuario" value="usuario&lt;br&gt;PK id_usuario BIGINT UNSIGNED NOT NULL&lt;br&gt;nombre VARCHAR(120) NOT NULL&lt;br&gt;UQ correo VARCHAR(180) NOT NULL&lt;br&gt;contrasena_hash VARCHAR(255) NOT NULL&lt;br&gt;estado ENUM NOT NULL&lt;br&gt;  &amp;#x27;ACTIVO&amp;#x27;,&amp;#x27;DESACTIVADO&amp;#x27;,&amp;#x27;BLOQUEADO&amp;#x27;&lt;br&gt;intentos_fallidos TINYINT UNSIGNED NOT NULL&lt;br&gt;bloqueado_hasta DATETIME NULL" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="40" y="140" width="800" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="rol" value="rol&lt;br&gt;PK id_rol TINYINT UNSIGNED NOT NULL&lt;br&gt;UQ nombre VARCHAR(30) NOT NULL&lt;br&gt;descripcion VARCHAR(150) NULL" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="1730" y="140" width="420" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="usuario_rol" value="usuario_rol&lt;br&gt;PK / FK id_usuario BIGINT UNSIGNED NOT NULL&lt;br&gt;PK / FK id_rol TINYINT UNSIGNED NOT NULL" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="140" width="590" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="recuperacion_contrasena" value="recuperacion_contrasena&lt;br&gt;PK id_recuperacion BIGINT UNSIGNED NOT NULL&lt;br&gt;FK id_usuario BIGINT UNSIGNED NOT NULL&lt;br&gt;UQ token CHAR(64) NOT NULL&lt;br&gt;fecha_generacion DATETIME NOT NULL&lt;br&gt;fecha_expiracion DATETIME NOT NULL&lt;br&gt;utilizado BOOLEAN NOT NULL" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="40" y="710" width="800" height="192" as="geometry"/>
+        </mxCell>
+        <mxCell id="direccion_entrega" value="direccion_entrega&lt;br&gt;PK id_direccion_entrega BIGINT UNSIGNED NOT NULL&lt;br&gt;FK / UQ id_pedido BIGINT UNSIGNED NOT NULL&lt;br&gt;FK id_zona SMALLINT UNSIGNED NOT NULL&lt;br&gt;direccion VARCHAR(200) NOT NULL&lt;br&gt;barrio VARCHAR(100) NOT NULL&lt;br&gt;ciudad VARCHAR(100) NOT NULL&lt;br&gt;referencia VARCHAR(255) NULL" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="820" width="680" height="216" as="geometry"/>
+        </mxCell>
+        <mxCell id="pedido" value="pedido&lt;br&gt;referencia externa (solo PK)&lt;br&gt;PK id_pedido BIGINT UNSIGNED NOT NULL" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="570" width="590" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="zona" value="zona&lt;br&gt;referencia externa (solo PK)&lt;br&gt;PK id_zona SMALLINT UNSIGNED NOT NULL" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=12;fontFamily=Consolas;fontSize=14;fillColor=#eaf2f8;strokeColor=#425466;" vertex="1" parent="1">
+          <mxGeometry x="1750" y="820" width="430" height="96" as="geometry"/>
+        </mxCell>
+        <mxCell id="e0" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=none;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="usuario" target="usuario_rol">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="840" y="220"/>
+              <mxPoint x="1040" y="220"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=none;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="rol" target="usuario_rol">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1730" y="220"/>
+              <mxPoint x="1630" y="220"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=none;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="usuario" target="recuperacion_contrasena">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="380"/>
+              <mxPoint x="400" y="710"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" value="1 : 0..1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=none;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="pedido" target="direccion_entrega">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1350" y="666"/>
+              <mxPoint x="1350" y="820"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="1 : 0..N" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;startArrow=none;endArrow=none;fontSize=14;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="zona" target="direccion_entrega">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1965" y="820"/>
+              <mxPoint x="1965" y="740"/>
+              <mxPoint x="1600" y="740"/>
+              <mxPoint x="1600" y="820"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leyenda" value="PK: clave primaria · FK: clave foránea · UQ: único · PK compuesta en tablas asociativas&lt;br&gt;Cada hija referencia exactamente un padre. Las etiquetas indican padre : hijas permitidas por el DDL.&lt;br&gt;El negocio exige roles al registrarse y una dirección por pedido; la aplicación garantiza esos mínimos.&lt;br&gt;ON DELETE / ON UPDATE y valores DEFAULT: consultar las tablas del documento Markdown." style="text;html=1;align=left;verticalAlign=top;fontFamily=Consolas;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1240" width="2100" height="120" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
