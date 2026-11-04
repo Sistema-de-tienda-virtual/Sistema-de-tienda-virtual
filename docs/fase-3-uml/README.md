@@ -27,27 +27,27 @@ Fuente: [`clases.drawio`](diagramas/clases/clases.drawio)
 
 ### General
 
-![Diagrama de actividades general](diagramas/Actividades/diagrama-actividades-general.png)
+![Diagrama de actividades general](diagramas/actividades/diagrama-actividades-general.png)
 
 ### Catálogo y carrito
 
-![Diagrama de actividades de catálogo y carrito](diagramas/Actividades/diagrama-actividades-catalogo-carrito.png)
+![Diagrama de actividades de catálogo y carrito](diagramas/actividades/diagrama-actividades-catalogo-carrito.png)
 
 ### Checkout y confirmación
 
-![Diagrama de actividades de checkout y confirmación](diagramas/Actividades/diagrama-actividades-checkout-confirmacion.png)
+![Diagrama de actividades de checkout y confirmación](diagramas/actividades/diagrama-actividades-checkout-confirmacion.png)
 
 ### Gestión del pedido y entrega
 
-![Diagrama de actividades de gestión del pedido y entrega](diagramas/Actividades/diagrama-actividades-gestion-pedido-entrega.png)
+![Diagrama de actividades de gestión del pedido y entrega](diagramas/actividades/diagrama-actividades-gestion-pedido-entrega.png)
 
 ### Inventario y merma
 
-![Diagrama de actividades de inventario y merma](diagramas/Actividades/diagrama-actividades-inventario-merma.png)
+![Diagrama de actividades de inventario y merma](diagramas/actividades/diagrama-actividades-inventario-merma.png)
 
 ### Pedido
 
-![Diagrama de actividad del pedido](diagramas/Actividades/diagrama-actividad-pedido.png)
+![Diagrama de actividad del pedido](diagramas/actividades/diagrama-actividad-pedido.png)
 
 ## Estados
 
@@ -57,10 +57,10 @@ Fuente: [`clases.drawio`](diagramas/clases/clases.drawio)
 
 ![Diagrama de componentes](diagramas/componentes/componentes.png)
 
-![Diagrama de componentes Aroma de Rosas](diagramas/componentes/diagrama_componentes_aroma_de_rosas.png)
+![Diagrama de componentes Aroma de Rosas](diagramas/componentes/diagrama-componentes-aroma-de-rosas.png)
 
 ## Despliegue
 
 ![Diagrama de despliegue](diagramas/despliegue/despliegue.png)
 
-![Diagrama de despliegue Aroma de Rosas](diagramas/despliegue/diagrama_despliegue_aroma_de_rosas.png)
+![Diagrama de despliegue Aroma de Rosas](diagramas/despliegue/diagrama-despliegue-aroma-de-rosas.png)

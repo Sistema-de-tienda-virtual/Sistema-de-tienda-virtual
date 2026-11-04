@@ -15,7 +15,7 @@ El diseño contiene 64 pantallas superiores con capas de texto y vectores editab
 
 ## Fuentes revisadas
 
-Se contrastaron los documentos locales de fases 1 y 2 con `origin/main`, incluido `docs/fase-2-requerimientos/Fase_2_Requerimientos_Floristeria.md`. También se consultaron el modelo integrado y el script de tablas de fase 4 para mantener consistencia de roles, inventario, estados y pagos. La gobernanza consultada es `CONTRIBUTING.md` y `.github/pull_request_template.md`.
+Se contrastaron los documentos locales de fases 1 y 2 con `origin/main`, incluido `docs/fase-2-requerimientos/fase-2-requerimientos-floristeria.md`. También se consultaron el modelo integrado y el script de tablas de fase 4 para mantener consistencia de roles, inventario, estados y pagos. La gobernanza consultada es `CONTRIBUTING.md` y `.github/pull_request_template.md`.
 
 ## Inventario de pantallas
 

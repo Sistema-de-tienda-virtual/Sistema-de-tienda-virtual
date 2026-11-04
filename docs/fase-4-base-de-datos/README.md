@@ -12,7 +12,7 @@
 
 ## Entregado
 
-- [Modelo conceptual (MER)](modelos/modelo_conceptual_mer/modelo_conceptual.png) — Diagrama ER de entidades y relaciones
+- [Modelo conceptual (MER)](modelos/modelo-conceptual-mer/modelo-conceptual.png) — Diagrama ER de entidades y relaciones
 - [Modelo integrado](modelos/modelo-integrado.md) — entidades, atributos, claves, relaciones y diccionario de datos consolidado
 - [Modelo físico](modelos/modelo-fisico.md) — motor, tipos, acciones referenciales e índices
 
@@ -25,7 +25,7 @@
 - [Consultas de verificación](scripts/03-consultas.sql) — comprobación de tablas, relaciones y totales
 - [Diccionario de datos](scripts/diccionario-de-datos.md) — documentación de tablas y columnas
 
-![Modelo conceptual](modelos/modelo_conceptual_mer/modelo_conceptual.png)
+![Modelo conceptual](modelos/modelo-conceptual-mer/modelo-conceptual.png)
 
 ## Criterios
 
