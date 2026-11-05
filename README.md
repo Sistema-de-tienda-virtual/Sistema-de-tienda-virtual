@@ -20,7 +20,7 @@ para una floristería, aplicando el ciclo completo de análisis, diseño e imple
 | 2 | Requerimientos | Documento de requerimientos | 🟢 Terminado |
 | 3 | Diagramas UML | Diagramas UML | 🟢 Terminado |
 | 4 | Base de datos | Modelo ER/UML + Scripts SQL + Diccionario de datos | 🟢 Terminado |
-| 5 | Mockup / Prototipo | Prototipo navegable | ⚪ Pendiente |
+| 5 | Mockup / Prototipo | Prototipo navegable | 🟡 En curso |
 | 6 | Programa funcional | MVP funcional | ⚪ Pendiente |
 
 Leyenda: ⚪ Pendiente · 🟡 En curso · 🟢 Terminado
